@@ -1,0 +1,20 @@
+{
+  "name": "m364v7okzx",
+  "description": null,
+  "version": "0.0.0",
+  "dependencies": {
+    "react": "16.0.0",
+    "react-bootstrap-table": "4.1.1",
+    "react-dom": "16.0.0",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
