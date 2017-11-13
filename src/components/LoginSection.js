@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 
 class LoginSection extends Component {
@@ -40,11 +41,13 @@ class LoginSection extends Component {
 
 statusChangeCallback = (response) => {
 
+  if (response.status === 'connected') {
+
   let userDetails = {
     userId : response.authResponse.userID
   };
 
-  if (response.status === 'connected') {
+  
     FB.api('/me', (resp) => {
       userDetails.name = resp.name;
       this.props.history.push({
@@ -69,13 +72,13 @@ statusChangeCallback = (response) => {
 }
 
  handleClick = () => {
-  FB.login(this.checkLoginState());
+  FB.login(this.checkLoginState);
 }
 
 render() {
 	return(
 		<div>
-		<button><a onClick={this.handleClick}>Login</a></button>
+		<Button bsStyle="primary" bsSize="large" onClick={this.handleClick}>Login with Facebook</Button>
 		</div>
 		)
 }
