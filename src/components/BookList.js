@@ -102,6 +102,10 @@ class BookList extends React.Component {
     this.setState({displayUserBooks: !this.state.displayUserBooks });
   }
 
+  goToBookCreation = () => {
+    this.props.history.push('/createBook');
+  }
+
   renderAlert() {
     if (this.state.alertVisible) {
         return(
@@ -163,6 +167,7 @@ class BookList extends React.Component {
       <OverlayTrigger trigger="click" placement="bottom" overlay={popoverClick}>
       <Button bsStyle="primary" disabled={this.state.displayUserBooks}>ADD TO MY BOOKS</Button>
       </OverlayTrigger>
+      <Button bsStyle="primary" onClick={this.goToBookCreation}>ADD BOOKS TO CATALOGUE</Button>
       </ButtonToolbar>
       </div>
     );

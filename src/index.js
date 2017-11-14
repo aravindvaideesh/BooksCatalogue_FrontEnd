@@ -5,6 +5,7 @@ import {
   Route
 } from 'react-router-dom'
 import BookList from './components/BookList'
+import CreateBook from './components/CreateBook'
 import LoginWithRouter from './components/LoginSection'
 
 const styles = {
@@ -18,6 +19,7 @@ const App = () => (
       <Route path="/login" component={LoginWithRouter}/>
       <Route exact path="/" component={LoginWithRouter}/>
       <Route path="/books" component={BookList}/>
+      <Route path="/createBook" component={CreateBook}/>
     </div>
   </Router>
 );
